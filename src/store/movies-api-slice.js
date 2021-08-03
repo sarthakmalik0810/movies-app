@@ -10,8 +10,6 @@ export const apiSlice = createApi({
   endpoints: builder => ({
     fetchMovies: builder.query({
       query:({searchQuery, page}) => {
-        console.log(page);
-        console.log(searchQuery)
         return `?apikey=${MOVIES_API_KEY}&s=${searchQuery}&page=${page}`;
       },
     }),
