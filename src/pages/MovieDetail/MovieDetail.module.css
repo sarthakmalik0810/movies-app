@@ -1,0 +1,48 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 3rem;
+  margin-left: 3rem;
+  color: aliceblue;
+  font-family: 'Montserrat', sans-serif;
+}
+.container h1 {
+  color: aliceblue;
+}
+
+.container img {
+  width: 300px;
+}
+
+.detailContainer {
+  display: flex;
+}
+
+.movieContainer {
+  margin-left: 2rem;
+  max-width: 50%;
+}
+
+.movieContainer h3 {
+  font-family: 'Montserrat', sans-serif;
+}
+
+@media (max-width: 480px) {
+
+  .container {
+    margin: 0;
+    width: 90%;
+    margin-left: 5%;
+  }
+
+  .detailContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .movieContainer {
+    max-width: 70%;
+    align-self: start;
+    margin-left: 5%;
+  }
+}

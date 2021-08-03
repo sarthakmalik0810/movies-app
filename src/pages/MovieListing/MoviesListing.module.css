@@ -1,0 +1,52 @@
+.listingContainer {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin-left: 5%;
+}
+
+.mobileSearchContainer {
+  display: flex;
+  justify-content: space-around;
+  margin: 1rem;
+  flex-wrap: nowrap;
+}
+
+.mobileSearch {
+  width: 60%;
+  outline: none;
+  border: 1px solid #3F51B5;
+  border-radius: 10px;
+  height: 1.5rem;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+.mobileSearchButton {
+  border-radius: 10px;
+  width: 20%;
+  outline: none;
+  border: 1px solid #3F51B5;
+  background: #1a2668;
+  color: aliceblue;
+  font-family: 'Oswald', sans-serif;
+  font-size: 1.2rem;
+}
+
+.movieContainer {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.paginator {
+  display: flex;
+  justify-content: space-around;
+}
+
+@media (max-width: 480px) {
+  .movieContainer {
+    justify-content: center;
+  }
+}
+
