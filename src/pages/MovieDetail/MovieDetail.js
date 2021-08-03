@@ -1,6 +1,7 @@
 import React from 'react';
-import { useFetchMovieByIdQuery } from '../../store/movies-api-slice';
 import { useParams } from 'react-router-dom';
+
+import { useFetchMovieByIdQuery } from '../../store/movies-api-slice';
 import classes from './MovieDetail.module.css';
 
 const placeholder = '/assets/poster-placeholder.png';

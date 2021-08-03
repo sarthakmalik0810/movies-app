@@ -1,14 +1,15 @@
 import React from 'react';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { searchActions } from '../../store/search';
 import { useMediaQuery } from 'react-responsive';
 import { useFetchMoviesQuery } from '../../store/movies-api-slice';
-import classes from './MoviesListing.module.css';
-import MovieCard from '../../components/UI/MovieCard/MovieCard';
 import { useHistory } from 'react-router-dom';
-import Pagination from '@material-ui/lab/Pagination';
 import { makeStyles } from '@material-ui/styles';
+import Pagination from '@material-ui/lab/Pagination';
+
+import { searchActions } from '../../store/search';
+import MovieCard from '../../components/UI/MovieCard/MovieCard';
+import classes from './MoviesListing.module.css';
 
 const useStyles = makeStyles(() => ({
   ul: {
@@ -31,8 +32,10 @@ function MoviesListing() {
   const [searchState, setSearchState] = useState(searchQuery);
   let results;
 
-  const { data = { Search: [] }, isFetching } =
-    useFetchMoviesQuery({searchQuery: searchQuery, page: page});
+  const { data = { Search: [] }, isFetching } = useFetchMoviesQuery({
+    searchQuery: searchQuery,
+    page: page,
+  });
 
   const onChangeHandler = e => {
     setSearchState(e.target.value);
@@ -68,7 +71,7 @@ function MoviesListing() {
 
   const handlePageChange = (event, value) => {
     dispatch(searchActions.setPageNumber(value));
-  }
+  };
 
   results = noResults();
 

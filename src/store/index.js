@@ -1,4 +1,5 @@
 import { configureStore } from '@reduxjs/toolkit';
+
 import { apiSlice } from './movies-api-slice';
 import searchSlice from './search';
 

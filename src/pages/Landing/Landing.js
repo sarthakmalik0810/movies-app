@@ -1,8 +1,9 @@
 import React, { useRef } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import classes from './Landing.module.css';
+
 import { searchActions } from '../../store/search';
+import classes from './Landing.module.css';
 
 const moviesBanner = '/assets/movies.svg';
 

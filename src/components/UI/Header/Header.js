@@ -1,10 +1,11 @@
+import { useEffect } from 'react';
 import { useHistory, useLocation } from 'react-router-dom';
-import classes from './Header.module.css';
 import { useMediaQuery } from 'react-responsive';
 import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
+
 import { searchActions } from '../../../store/search';
-import { useEffect } from 'react';
+import classes from './Header.module.css';
 
 function Header() {
   const history = useHistory();
